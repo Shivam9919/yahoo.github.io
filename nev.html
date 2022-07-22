@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.cssbg">
+    <meta charset="UTF-8">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+    <style>
+        .navbar-toggler {
+            width: 47px;
+            height: 34px;
+            background-color: white;
+        }
+
+        .navbar-toggler .line {
+            width: 100%;
+            float: left;
+            height: 2px;
+            background-color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            padding: 12px 16px;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .text {
+            margin-top: 18px;
+            margin-left: -84px;
+        }
+
+        .has-search .form-control {
+            padding-left: 2.375rem;
+        }
+
+        .has-search .form-control-feedback {
+            position: absolute;
+            z-index: 2;
+            display: block;
+            width: 2.375rem;
+            height: 2.375rem;
+            line-height: 2.375rem;
+            text-align: center;
+            pointer-events: none;
+            color: #aaa;
+        }
+
+        .input-group {
+            width: 90%;
+            margin-top: 32px;
+            margin-left: 5px;
+        }
+
+        #hr1 {
+            background-color: #B9BDC5;
+            opacity: 0.8;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 220px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #007bff;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-conten {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 489px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-conten a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-conten a:hover {
+            background-color: #007bff;
+        }
+
+        .dropdown:hover .dropdown-conten {
+            display: block;
+        }
+
+        .dropdown-conte {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 744px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-conte a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-conte a:hover {
+            background-color: #007bff;
+        }
+
+        .dropdown:hover .dropdown-conte {
+            display: block;
+        }
+
+        nav {
+            < !--from w w w. jav a 2s . c o m-->background-color: #cccccc;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 5px;
+        }
+
+        nav ul li {
+            display: inline;
+            position: relative;
+        }
+
+        nav ul li div {
+            position: absolute;
+            left: -9999px;
+            width: 300px;
+        }
+
+        nav ul li:hover div {
+            left: 0;
+        }
+
+        nav ul li ul li {
+            display: list-item;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li ul {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md  navbar" style="background-color:#2d1152;">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <i class="bi bi-house-door"></i>
+                    <a class="nav-link" href="#">
+                        <font color="white"> Home</font>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <font color="white"> Mail</font>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <font color="white"> News</font>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <font color="white"> Finance</font>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <font color="white"> Sports</font>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <font color="white"> Entertainment</font>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <font color="white"> Search</font>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <font color="white"> Mobile</font>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <font color="white"> More...</font>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="yahoo.jpg" class="rounded" alt="Cinque Terre" width="9%" height="6%" style="margin-top:-17px;    margin-left: 15px;    height: 62px;
+width: 118px; padding: 10px;">
+                <a href="#"> <i class="fa fa-bell"
+                        style="font-size:30px;color:#6001d2; margin-top: 35px;margin-left: 38px;"></i></a>
+
+
+
+                <a href="#"> <i class="fa fa-envelope" aria-hidden="true" style="  color:#6001d2;  font-size: 30px;
+ margin-left: 42px;"></i>
+                    <font color="#6001d2">Mail</font>
+                </a>
+
+
+            </div>
+            <div class="col-sm-8">
+                <div class="input-group">
+
+                    <input type="text" class="form-control" placeholder="Search this blog">
+                    <div class="input-group-append">
+                        <button class="btn btn-secondary" type="button" style="height: 38px;">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-primary"
+                            style="margin-left:36px;color:#2d1152; margin-top:0px ;">Sign
+                            in</button>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-sm-12 " style="margin-top:10px">
+                <a href="#" style="font-weight: bold;">
+                    <font color="#2d115">Finance Home</font>
+                </a>
+                <a href="#" style="margin-left: 15px;font-weight: bold;">
+                    <font color="#2d115">Watchlists</font>
+                </a>
+                <a href="#" style="margin-left: 15px;font-weight: bold;">
+                    <font color="#2d115">My Portfolio</font>
+                </a>
+                <a href="#" style="margin-left: 15px;font-weight: bold;">
+                    <font color="#2d115">cryptocurrencies</font>
+                </a>
+                <div class="dropdown">
+                    <a href="#" style="margin-left: 15px;font-weight: bold;">
+                        <font color="#2d115">screeners</font>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="#">Saved Screeners</a>
+                        <a href="#">Equity Screener</a>
+                        <a href="#">Mutual Fund Screener</a>
+                        <a href="#">ETF Screener</a>
+                        <a href="#">Futures Screener</a>
+                        <a href="#">Index Screener</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a href="#" style="margin-left:15px;font-weight: bold;">
+                        <font color="#2d115">Markets</font>
+                    </a>
+                    <div class="dropdown-conten">
+                        <nav>
+                            <ul>
+                                <li>
+
+                                    <ul>
+                                        <li> <a href="#">Calendars</a> </li>
+                                        <li> <a href="#">Trending Tickers</a> </li>
+                                        <li> <a href="#">Stocks:Most Actives</a> </li>
+                                        <li> <a href="#">Stocks:Gainers</a> </li>
+                                        <li> <a href="#">Stocks:Losers</a> </li>
+                                        <li> <a href="#">Top ETFs</a> </li>
+                                        <li> <a href="#">Futures</a> </li>
+                                        <li> <a href="#">World Indices</a> </li>
+                                    </ul>
+                                    <ul style="    vertical-align: top;">
+                                        <li> <a href="#">Currencies</a> </li>
+                                        <li> <a href="#">Top Mutual Fund</a> </li>
+                                        <li> <a href="#">Option:Highest Open Interest</a> </li>
+                                        <li> <a href="#">Option:Highest Implied Volat...</a> </li>
+                                        <li> <a href="#">US Treasury Bonds Rates</a> </li>
+                                        <li> <a href="#">Currency Converter</a> </li>
+
+
+                                    </ul>
+
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a href="#" style="margin-left: 15px;  font-weight: bold;">
+                        <font color="#2d115">News
+                    </a>
+                    <div class="dropdown-conte" style="    margin-left: -350px;">
+                        <nav>
+                            <ul>
+                                <li>
+
+                                    <ul>
+                                        <li> <a href="#">Latest News</a> </li>
+                                        <li> <a href="#">Politics</a> </li>
+                                        <li> <a href="#">Stock Market News</a> </li>
+                                        <li> <a href="#">Crypto News</a> </li>
+                                        <li> <a href="#">Economic News</a> </li>
+                                        <li> <a href="#">Morning Brief</a> </li>
+                                        <li> <a href="#">Bidenomics Report Card</a> </li>
+                                        <li> <a href="#">Adriana Belmonte</a> </li>
+                                        <li> <a href="#">Akiko Fujita</a> </li>
+                                    </ul>
+                                    <ul>
+                                        <li> <a href="#">Alexandra Canal</a> </li>
+                                        <li> <a href="#">Alexandra Garfinkle</a> </li>
+                                        <li> <a href="#">Alexandra Semenova</a> </li>
+                                        <li> <a href="#">Alexis Keenam</a> </li>
+                                        <li> <a href="#">Andy Serwer</a> </li>
+                                        <li> <a href="#">Anjalee Khemlani</a> </li>
+                                        <li> <a href="#">Ben Werschkul</a> </li>
+                                        <li> <a href="#">Brad Smith</a> </li>
+                                        <li> <a href="#">Brian Cheung</a> </li>
+                                    </ul>
+                                    <ul>
+                                        <li> <a href="#">Brian Sozzi</a> </li>
+                                        <li> <a href="#">Brooke DiPalma</a> </li>
+                                        <li> <a href="#">Dani Romero</a> </li>
+                                        <li> <a href="#">Daniel Howley</a> </li>
+                                        <li> <a href="#">Dave Briggs</a> </li>
+                                        <li> <a href="#">David Hollerith</a> </li>
+                                        <li> <a href="#">Dylan Croll</a> </li>
+                                        <li> <a href="#">Ella Vincent</a> </li>
+                                        <li> <a href="#">Emily McCormick</a> </li>
+                                    </ul>
+                                    <ul>
+                                        <li> <a href="#">Erin Fuchs</a> </li>
+                                        <li> <a href="#">Ethan Wolff-Mann</a> </li>
+                                        <li> <a href="#">Ines Ferre</a> </li>
+                                        <li> <a href="#">Jared Blikre</a> </li>
+                                        <li> <a href="#">Jennifer Schonberger</a> </li>
+                                        <li> <a href="#">Julie Hyman</a> </li>
+                                        <li> <a href="#">Kerry Hannon</a> </li>
+                                        <li> <a href="#">Luke Carberry Mogan</a> </li>
+                                        <li> <a href="#">Marquise Francis</a> </li>
+                                    </ul>
+
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a href="#" style="margin-left: 15px;font-weight: bold;">
+                        <font color="#2d115">Personal Finance</font>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="#">Home</a>
+                        <a href="#">My Money</a>
+                        <a href="#">Retirement</a>
+                        <a href="#">Taxes</a>
+                        <a href="#">Rates</a>
+
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a href="#" style="margin-left: 15px;font-weight: bold;">
+                        <font color="#2d115">Videos</font>
+                    </a>
+                    <div class="dropdown-conten" style="margin-left: -170px;">
+                        <nav>
+                            <ul>
+                                <li>
+
+                                    <ul>
+                                        <li> <a href="#">Yahoo Finance Live</a> </li>
+                                        <li> <a href="#">Influencers With Andy Serwer</a> </li>
+                                        <li> <a href="#">Yahoo Finance Presents</a> </li>
+                                        <li> <a href="#">Yahoo U</a> </li>
+                                        <li> <a href="#">Spotlight</a> </li>
+                                        <li> <a href="#">Yahoo Finance All Markets Su...</a> </li>
+                                        <li> <a href="#">Events</a> </li>
+                                        <li> <a href="#">ETF Report</a> </li>
+                                        <li> <a href="#">Davos</a> </li>
+                                    </ul>
+                                    <ul style="    vertical-align: top;">
+                                        <li> <a href="#">Crypto Corner</a> </li>
+                                        <li> <a href="#">FA Corner</a> </li>
+                                        <li> <a href="#">America:Back in Business</a> </li>
+
+
+
+                                    </ul>
+
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <a href="#" style="margin-left: 15px;font-weight: bold;">
+                    <font color="#2d115">Yahoo U</font>
+                </a>
+
+                <div class="dropdown">
+                    <a href="#" style="margin-left: 15px;font-weight: bold;">
+                        <font color="#2d115">...</font>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="#">Industries</a>
+                        <a href="#">Tech</a>
+                        <a href="#">Contact Us</a>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <hr id="hr1">
+    </div>
+    <div class="col-sm-2 ">
+        <a href="#">
+            S&P Futures
+        </a>
+    </div>
+    <div class="col-sm-2 ">
+        <a href="#">
+
+        </a>
+    </div>
+    <div class="col-sm-2 ">
+        <a href="#">
+
+        </a>
+    </div>
+    <div class="col-sm-2 ">
+        <a href="#">
+
+        </a>
+    </div>
+    <div class="col-sm-2 ">
+        <a href="#">
+
+        </a>
+    </div>
+    <div class="col-sm-2 ">
+        <a href="#">
+
+        </a>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
