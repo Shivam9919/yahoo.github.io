@@ -4,7 +4,7 @@
 <head>
     <title>Bootstrap Example</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.cssbg">
@@ -19,6 +19,9 @@
 
 
     <style>
+
+         
+
         .navbar-toggler {
             width: 47px;
             height: 34px;
@@ -197,7 +200,17 @@
             margin: 0;
             padding: 0;
         }
-    </style>
+
+
+        @media only screen and(min-width: 200px)
+        {
+          .col-sm-4{
+            margin-top: -73px;
+          }  
+        }
+        
+        
+        </style>
 </head>
 
 <body>
